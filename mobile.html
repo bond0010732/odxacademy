@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile App Development – ODX Academy</title>
+  <link rel="stylesheet" href="./course-detail-page.css">
+</head>
+
+<body class="course-detail-page">
+
+<!-- HERO -->
+<header class="course-hero mobile-hero">
+  <div class="container">
+    <h1>Mobile App Development</h1>
+    <p>Learn to build beautiful and scalable mobile apps for Android & iOS using React Native.</p>
+    <a href="#contact" class="btn primary-btn">Enroll Now</a>
+  </div>
+</header>
+
+<!-- COURSE OVERVIEW -->
+<section class="course-section enhanced-overview">
+  <div class="container">
+
+    <h2>Course Overview</h2>
+
+    <div class="overview-grid">
+      <div class="overview-text">
+        <p>Master cross-platform app development with React Native and build real apps ready for App Store and Play Store.</p>
+
+        <h3>What You Will Learn</h3>
+        <ul class="fancy-list">
+          <li><span class="icon">📱</span> React Native Essentials</li>
+          <li><span class="icon">🎨</span> UI Components & Layouts</li>
+          <li><span class="icon">🔌</span> API Integration</li>
+          <li><span class="icon">🧭</span> Navigation & Screens</li>
+          <li><span class="icon">📦</span> State Management</li>
+          <li><span class="icon">☁️</span> Firebase & Cloud Storage</li>
+          <li><span class="icon">🚀</span> Publishing Apps</li>
+        </ul>
+      </div>
+
+  
+    </div>
+
+    <h3>Tools You'll Use</h3>
+    <ul class="fancy-list">
+      <li><span class="icon">⚛️</span> React Native</li>
+      <li><span class="icon">🧪</span> Expo</li>
+      <li><span class="icon">🌐</span> API Clients</li>
+      <li><span class="icon">🐙</span> Git & GitHub</li>
+      <li><span class="icon">☁️</span> Firebase Console</li>
+    </ul>
+
+    <h3>Projects You Will Build</h3>
+    <ul class="fancy-list">
+      <li><span class="icon">📱</span> Mobile Authentication App</li>
+      <li><span class="icon">🛍️</span> E-commerce App</li>
+      <li><span class="icon">💬</span> Chat App</li>
+      <li><span class="icon">📍</span> Location-Based App</li>
+      <li><span class="icon">🎬</span> Video Streaming App</li>
+    </ul>
+
+    <div class="enhanced-info">
+      <p><strong>Duration:</strong> 8 Weeks</p>
+      <p><strong>Level:</strong> Beginner – Intermediate</p>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- ========================= contact-section start ========================= -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+   
+  
+
+ <form id="contactForm" class="contact-form">
+  <div class="row">
+    <div class="col-md-6">
+      <input type="text" name="first_name" id="first_name" placeholder="First Name" required />
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="last_name" id="last_name" placeholder="Last Name" required />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <input type="email" name="email" id="email" placeholder="Email" required />
+    </div>
+  </div>
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <select name="course" id="course" required>
+        <option value="">Select Course</option>
+        <option value="frontend">Frontend Development</option>
+        <option value="backend">Backend Development</option>
+        <option value="mobile">Mobile App Development</option>
+        <option value="online">Learn Online</option>
+        <option value="collaboration">Build With Others</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="referral" id="referral" placeholder="How did you hear about us?" />
+    </div>
+  </div>
+  <div class="row">
+  
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <textarea name="message" id="message" placeholder="Type Message" rows="5"></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <button type="submit" class="btn primary-btn rounded-full">Send via WhatsApp</button>
+    </div>
+  </div>
+</form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================= contact-section end ========================= -->
+
+
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h4>Is this for beginners?</h4>
+      <p>Yes. No coding background needed.</p>
+    </div>
+
+    <div class="faq">
+      <h4>Will I publish apps?</h4>
+      <p>Yes. You will learn how to deploy to both stores.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const form = document.getElementById("contactForm");
+  const whatsappNumber = "+2347075625598"; // replace with your WhatsApp number with country code
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent normal form submission
+
+    // Get form values
+    const firstName = document.getElementById("first_name").value;
+    const lastName = document.getElementById("last_name").value;
+    const email = document.getElementById("email").value;
+    const course = document.getElementById("course").value;
+    const referral = document.getElementById("referral").value;
+    const message = document.getElementById("message").value;
+
+    // Create message
+    let text = `*New Contact Form Submission*%0A`;
+    text += `*Name:* ${firstName} ${lastName}%0A`;
+    text += `*Email:* ${email}%0A`;
+    text += `*Course:* ${course}%0A`;
+    if(referral) text += `*Referral:* ${referral}%0A`;
+    text += `*Message:* ${message}`;
+
+    // Open WhatsApp
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+
+</body>
+</html>

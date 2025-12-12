@@ -1,0 +1,351 @@
+/* =========================================
+   COURSE DETAIL PAGE – ODX Academy
+   (Safe to use with existing style.css)
+========================================= */
+
+.course-detail-page {
+  --primary: #4a3aff;
+  --dark: #1a1a1a;
+  --text: #555;
+  --light: #f5f6ff;
+  --white: #fff;
+  font-family: "Inter", sans-serif;
+  background: #fafafa;
+  color: var(--dark);
+}
+
+/* -----------------------------------------
+   HERO SECTION
+----------------------------------------- */
+.course-hero {
+  padding: 90px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.frontend-hero {
+  background: linear-gradient(135deg, #4a3aff, #6a5bff);
+}
+
+.backend-hero {
+  background: linear-gradient(135deg, #4a3aff, #6a5bff);
+}
+
+.mobile-hero {
+  background: linear-gradient(135deg, #4a3aff, #6a5bff);
+}
+
+/* Online Learning Hero */
+.online-hero {
+  background: linear-gradient(135deg, #28a745, #81c784);
+}
+
+/* Collaboration Hero */
+.collaborate-hero {
+  background: linear-gradient(135deg, #ff6f61, #ff9980);
+}
+
+
+
+.course-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.course-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  opacity: 0.95;
+  
+}
+
+/* Button */
+.primary-btn {
+  background: var(--white);
+  color: var(--primary);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #eae8ff;
+}
+
+/* -----------------------------------------
+   COURSE CONTENT SECTIONS
+----------------------------------------- */
+.course-section {
+  padding: 60px 0;
+}
+
+.course-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.course-section p {
+  font-size: 17px;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.course-section h3 {
+  margin-top: 35px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Lists */
+.course-list,
+.tools-list {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.course-list li,
+.tools-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--dark);
+  position: relative;
+  padding-left: 18px;
+}
+
+.course-list li::before,
+.tools-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Course Info Box */
+.course-info {
+  background: var(--light);
+  padding: 20px 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.course-info p {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #eae8ff;
+}
+
+.enhanced-info p {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #eae8ff;
+}
+/* ===========================
+   ENHANCED COURSE OVERVIEW
+============================ */
+
+.enhanced-overview .overview-grid {
+  justify-content: center;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.overview-text p {
+  width: 100%;
+  text-align: center;
+}
+
+/* Icons inside lists */
+.fancy-list li {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  padding: 10px 14px;
+  background: var(--white);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.fancy-list .icon {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+/* Info Box */
+.enhanced-info {
+  background: linear-gradient(to right, var(--primary), #6a5bff);
+  color: var(--white);
+  padding: 25px 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.enhanced-info p {
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .enhanced-overview .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-image img {
+    height: 220px;
+  }
+}
+
+/* -----------------------------------------
+   FAQ
+----------------------------------------- */
+.faq-section {
+  padding: 50px 0 80px;
+}
+
+.faq-section h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.faq {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.faq h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.faq p {
+  font-size: 16px;
+  color: var(--text);
+}
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+@media (max-width: 768px) {
+  .course-hero h1 {
+    font-size: 34px;
+  }
+
+  .course-hero p {
+    font-size: 16px;
+  }
+
+  .course-section h2 {
+    font-size: 26px;
+  }
+
+  .course-section h3 {
+    font-size: 20px;
+  }
+}
+
+
+/* ==============================
+   CONTACT FORM – ODX Academy
+============================== */
+
+/* Form Container */
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Inputs and Textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: #4a3aff; /* Primary color */
+  box-shadow: 0 0 6px rgba(74, 58, 255, 0.3);
+}
+
+/* Select Dropdown */
+.contact-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%234a3aff' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 16px center;
+  background-size: 14px 8px;
+  cursor: pointer;
+}
+
+/* Textarea */
+.contact-form textarea {
+  resize: none;
+}
+
+/* Button */
+.contact-form .btn.primary-btn {
+  background: #4a3aff;
+  color: #fff;
+  padding: 14px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.contact-form .btn.primary-btn:hover {
+  background: #3529d9;
+}
+
+
+/* Responsive Grid */
+.contact-form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-form .col-md-6 {
+  flex: 0 0 48%;
+}
+
+.contact-form .col-12 {
+  flex: 0 0 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-form .col-md-6 {
+    flex: 0 0 100%;
+  }
+}

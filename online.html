@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Online – ODX Academy</title>
+  <link rel="stylesheet" href="./course-detail-page.css">
+</head>
+
+<body class="course-detail-page">
+
+<!-- HERO -->
+<header class="course-hero online-hero">
+  <div class="container">
+    <h1>Learn Online</h1>
+    <p>Take courses from anywhere, anytime, and become a professional while building real projects with peers.</p>
+    <a href="#contact" class="btn primary-btn">Get Started</a>
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section class="course-section enhanced-overview">
+  <div class="container">
+
+    <div class="overview-grid">
+      <div class="overview-text">
+        <h2>Why Learn Online?</h2>
+        <p>ODX Academy provides flexible online courses designed to fit your schedule while giving hands-on experience.</p>
+
+        <h3>What You Will Gain</h3>
+        <ul class="fancy-list">
+          <li><span class="icon">💻</span> Flexible Learning Schedule</li>
+          <li><span class="icon">📚</span> Access to All Course Materials</li>
+          <li><span class="icon">🌍</span> Learn from Anywhere in the World</li>
+          <li><span class="icon">🧑‍💻</span> Hands-On Project Experience</li>
+          <li><span class="icon">📈</span> Career Growth Opportunities</li>
+        </ul>
+
+        <div class="enhanced-info">
+          <p><strong>Mode:</strong> Online</p>
+          <p><strong>Access:</strong> 24/7 course materials + projects</p>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- ========================= contact-section start ========================= -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+   
+  
+
+ <form id="contactForm" class="contact-form">
+  <div class="row">
+    <div class="col-md-6">
+      <input type="text" name="first_name" id="first_name" placeholder="First Name" required />
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="last_name" id="last_name" placeholder="Last Name" required />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <input type="email" name="email" id="email" placeholder="Email" required />
+    </div>
+  </div>
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <select name="course" id="course" required>
+        <option value="">Select Course</option>
+        <option value="frontend">Frontend Development</option>
+        <option value="backend">Backend Development</option>
+        <option value="mobile">Mobile App Development</option>
+        <option value="online">Learn Online</option>
+        <option value="collaboration">Build With Others</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="referral" id="referral" placeholder="How did you hear about us?" />
+    </div>
+  </div>
+  <div class="row">
+  
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <textarea name="message" id="message" placeholder="Type Message" rows="5"></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <button type="submit" class="btn primary-btn rounded-full">Send via WhatsApp</button>
+    </div>
+  </div>
+</form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================= contact-section end ========================= -->
+
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h4>Can I learn at my own pace?</h4>
+      <p>Yes. You can access lessons anytime and follow your own schedule.</p>
+    </div>
+
+    <div class="faq">
+      <h4>Will I get hands-on experience?</h4>
+      <p>Absolutely. Every course includes real projects to build your portfolio.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const form = document.getElementById("contactForm");
+  const whatsappNumber = "+2347075625598"; // replace with your WhatsApp number with country code
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent normal form submission
+
+    // Get form values
+    const firstName = document.getElementById("first_name").value;
+    const lastName = document.getElementById("last_name").value;
+    const email = document.getElementById("email").value;
+    const course = document.getElementById("course").value;
+    const referral = document.getElementById("referral").value;
+    const message = document.getElementById("message").value;
+
+    // Create message
+    let text = `*New Contact Form Submission*%0A`;
+    text += `*Name:* ${firstName} ${lastName}%0A`;
+    text += `*Email:* ${email}%0A`;
+    text += `*Course:* ${course}%0A`;
+    if(referral) text += `*Referral:* ${referral}%0A`;
+    text += `*Message:* ${message}`;
+
+    // Open WhatsApp
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+
+</body>
+</html>

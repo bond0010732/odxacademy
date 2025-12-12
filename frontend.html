@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Development – ODX Academy</title>
+<link rel="stylesheet" href="./course-detail-page.css">
+
+</head>
+
+<body class="course-detail-page">
+
+
+<!-- Hero Section -->
+<header class="course-hero frontend-hero">
+  <div class="container">
+    <h1>Frontend Development</h1>
+    <p>Become a professional Frontend Developer and build stunning, responsive websites and web apps.</p>
+    <a href="#contact" class="btn primary-btn">Enroll Now</a>
+  </div>
+</header>
+
+<!-- Course Overview -->
+<!-- Course Overview -->
+<section class="course-section enhanced-overview">
+  <div class="container">
+
+    <!-- Top Overview Row -->
+    <div class="overview-grid">
+      <div class="overview-text">
+        <h2>Course Overview</h2>
+        <p>
+          Learn how to design and develop attractive, responsive web interfaces using
+          modern frontend technologies. This course takes you from beginner to job-ready.
+        </p>
+      </div>
+
+      <!-- Overview Image -->
+
+    </div>
+
+    <!-- What You Will Learn -->
+    <h3>What You Will Learn</h3>
+    <ul class="course-list fancy-list">
+      <li><i class="icon">🌐</i> HTML5 & Semantic Structure</li>
+      <li><i class="icon">🎨</i> CSS3, Flexbox & Grid</li>
+      <li><i class="icon">📱</i> Responsive Web Design</li>
+      <li><i class="icon">⚡</i> JavaScript (ES6+)</li>
+      <li><i class="icon">⚛️</i> React.js Fundamentals</li>
+      <li><i class="icon">🔗</i> API Integration</li>
+      <li><i class="icon">🧩</i> UI/UX Best Practices</li>
+      <li><i class="icon">💻</i> Git & GitHub</li>
+    </ul>
+
+    <!-- Tools -->
+    <h3>Tools You’ll Use</h3>
+    <ul class="tools-list fancy-list">
+      <li><i class="icon">📝</i> VS Code</li>
+      <li><i class="icon">🎨</i> Figma</li>
+      <li><i class="icon">🔍</i> Chrome DevTools</li>
+      <li><i class="icon">⚛️</i> React.js</li>
+      <li><i class="icon">📦</i> GitHub</li>
+    </ul>
+
+    <!-- Projects -->
+    <h3>Projects You Will Build</h3>
+    <ul class="course-list fancy-list">
+      <li><i class="icon">🤩</i> Portfolio Website</li>
+      <li><i class="icon">📄</i> Landing Pages</li>
+      <li><i class="icon">☁️</i> Weather App (API)</li>
+      <li><i class="icon">📊</i> React Dashboard</li>
+      <li><i class="icon">🎬</i> Full UI Clone (Netflix/YouTube)</li>
+    </ul>
+
+    <!-- Info Box -->
+    <div class="course-info enhanced-info">
+      <p><strong>Duration:</strong> 8 Weeks</p>
+      <p><strong>Level:</strong> Beginner – Intermediate</p>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- ========================= contact-section start ========================= -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+   
+  
+
+ <form id="contactForm" class="contact-form">
+  <div class="row">
+    <div class="col-md-6 form-gap">
+      <input type="text" name="first_name" id="first_name" placeholder="First Name" required />
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="last_name" id="last_name" placeholder="Last Name" required />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <input type="email" name="email" id="email" placeholder="Email" required />
+    </div>
+  </div>
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <select name="course" id="course" required>
+        <option value="">Select Course</option>
+        <option value="frontend">Frontend Development</option>
+        <option value="backend">Backend Development</option>
+        <option value="mobile">Mobile App Development</option>
+        <option value="online">Learn Online</option>
+        <option value="collaboration">Build With Others</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="referral" id="referral" placeholder="How did you hear about us?" />
+    </div>
+  </div>
+  <div class="row">
+  
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <textarea name="message" id="message" placeholder="Type Message" rows="5"></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <button type="submit" class="btn primary-btn rounded-full">Send via WhatsApp</button>
+    </div>
+  </div>
+</form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================= contact-section end ========================= -->
+
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h4>Do I need prior experience?</h4>
+      <p>No. This course is beginner-friendly.</p>
+    </div>
+
+    <div class="faq">
+      <h4>Will I work on projects?</h4>
+      <p>Yes. Many hands-on projects including a final portfolio project.</p>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const form = document.getElementById("contactForm");
+  const whatsappNumber = "+2347075625598"; // replace with your WhatsApp number with country code
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent normal form submission
+
+    // Get form values
+    const firstName = document.getElementById("first_name").value;
+    const lastName = document.getElementById("last_name").value;
+    const email = document.getElementById("email").value;
+    const course = document.getElementById("course").value;
+    const referral = document.getElementById("referral").value;
+    const message = document.getElementById("message").value;
+
+    // Create message
+    let text = `*New Contact Form Submission*%0A`;
+    text += `*Name:* ${firstName} ${lastName}%0A`;
+    text += `*Email:* ${email}%0A`;
+    text += `*Course:* ${course}%0A`;
+    if(referral) text += `*Referral:* ${referral}%0A`;
+    text += `*Message:* ${message}`;
+
+    // Open WhatsApp
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+
+</body>
+</html>

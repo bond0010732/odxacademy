@@ -1,0 +1,287 @@
+.companies-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.companies-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.companies-sub {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Logo Slider */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 25px 0;
+}
+
+.logos-track {
+  display: flex;
+  gap: 60px;
+  animation: scroll 20s linear infinite;
+}
+
+.logos-track img {
+  height: 50px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.logos-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .companies-title {
+    font-size: 26px;
+  }
+  .logos-track {
+    gap: 40px;
+  }
+  .logos-track img {
+    height: 40px;
+  }
+}
+
+
+.stats-section {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.stats-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.stats-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  padding: 20px 10px;
+}
+
+.stat-box h3 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-box h3 {
+    font-size: 32px;
+  }
+  .stats-title {
+    font-size: 26px;
+  }
+}
+.benefits-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.benefits-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.benefits-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Feature Box */
+.benefit-box {
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+}
+
+.benefit-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.benefit-icon {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a73e8; /* Primary color */
+  margin-bottom: 15px;
+}
+
+.benefit-box h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.benefit-box p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits-title {
+    font-size: 26px;
+  }
+  .benefit-icon {
+    font-size: 28px;
+  }
+}
+.benefit-icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.testimonials {
+  padding: 60px 20px;
+  background: #f8f8ff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  min-width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.6s ease-in-out;
+  padding: 20px;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide .text {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.prev, .next {
+  background: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.prev { left: -40px; }
+.next { right: -40px; }
+
+.prev:hover, .next:hover {
+  background: #444;
+}
+
+.dots {
+  margin-top: 20px;
+}
+
+.dots span {
+  height: 10px;
+  width: 10px;
+  background: #aaa;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dots .active-dot {
+  background: #000;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+.link-box {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.link-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+
